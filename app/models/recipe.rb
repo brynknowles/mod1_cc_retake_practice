@@ -15,4 +15,12 @@ class Recipe
         @@all
     end
 
+    def menu_items
+        MenuItem.all.select {|item| item.recipe == self}
+    end
+
+    def restaurants
+        self.menu_items.collect {|item| item.restaurant}
+    end
+
 end
