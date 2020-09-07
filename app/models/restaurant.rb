@@ -20,7 +20,15 @@ class Restaurant
         MenuItem.all.select {|item| item.restaurant == self}
     end
 
-    def recipes
-        self.menu_items.filter {|item| item.recipe}
+    def recipes  ## I tried using .filter here, and it screwed up my has_dish? method.
+        self.menu_items.map {|item| item.recipe}
+    end
+
+    def has_dish?(recipe)
+        self.recipes.include?(recipe) #always returns false if .map is used in the recipes method above!
+    end
+
+    def self.highest_rated
+        self.all.max_by {|restaurant| restaurant.star_rating}
     end
 end

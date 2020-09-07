@@ -6,22 +6,6 @@ def reload
   load 'config/environment.rb'
 end
 
-## RestaurantOwner Instances 
-
-Ari = RestaurantOwner.new("Ari", 4)
-Bryn = RestaurantOwner.new("Bryn", 45)
-Katherine = RestaurantOwner.new("Katherine", 37)
-
-## Restaurant Instances
-
-rest1 = Restaurant.new(Ari, "Pancakes Every Day", 5)
-rest2 = Restaurant.new(Ari, "Burger Fry", 5)
-rest3 = Restaurant.new(Bryn, "Mexican Food 24-7", 3)
-rest4 = Restaurant.new(Bryn, "Pizza Schmizza", 4)
-rest5 = Restaurant.new(Katherine, "All Things Vegan", 5)
-rest6 = Restaurant.new(Katherine, "Coffee & Bagels", 4)
-rest7 = Restaurant.new(Katherine, "You Eat", 5)
-
 ## Recipe Instances
 
 pancakes = Recipe.new("Pancakes", "Buttermilk")
@@ -40,8 +24,27 @@ bratwurst = Recipe.new("Brat", "Bratwurst -secret recipe")
 pierogis = Recipe.new("Pierogi", "Pierogi platter - secret recipe")
 kapusta = Recipe.new("Kapusta", "Kapusta - secret recipe")
 sauces = Recipe.new("Sauces", "Assorted mustards")
+chips = Recipe.new("Chips", "Bag of chips")
+cola = Recipe.new("Cola", "Canned soda")
 
-## MenuItem Instances - This is the JOIN class
+## RestaurantOwner Instances 
+
+Ari = RestaurantOwner.new("Ari", 4)
+Bryn = RestaurantOwner.new("Bryn", 45)
+Katherine = RestaurantOwner.new("Katherine", 37)
+
+## Restaurant Instances
+
+rest1 = Restaurant.new(Ari, "Pancakes Every Day", 4)
+rest2 = Restaurant.new(Ari, "Burger Fry", 4)
+rest3 = Restaurant.new(Bryn, "Mexican Food 24-7", 3)
+rest4 = Restaurant.new(Bryn, "Pizza Schmizza", 4)
+rest5 = Restaurant.new(Katherine, "All Things Vegan", 4)
+rest6 = Restaurant.new(Katherine, "Coffee & Bagels", 4)
+rest7 = Restaurant.new(Katherine, "You Eat", 5)
+
+
+## MenuItem Instances
 
 item1 = MenuItem.new(rest1, pancakes, 5.50)
 item2 = MenuItem.new(rest1, egg, 2.50)
@@ -59,6 +62,7 @@ item13 = MenuItem.new(rest7, bratwurst, 3.50)
 item14 = MenuItem.new(rest7, pierogis, 8.50)
 item15 = MenuItem.new(rest7, kapusta, 4.50)
 item16 = MenuItem.new(rest7, sauces, 2.50)
+item17 = MenuItem.new(rest6, egg, 3.50)
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #

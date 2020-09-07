@@ -20,4 +20,8 @@ class MenuItem
         self.restaurant.owner
     end
 
+    def self.most_expensive_item
+        self.all.map {|item| item.price}.max
+    end
+
 end
