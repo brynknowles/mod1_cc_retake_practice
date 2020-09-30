@@ -1,7 +1,6 @@
 class Restaurant
 
-    attr_reader :owner
-    attr_accessor :name, :star_rating
+    attr_accessor :owner, :name, :star_rating
 
     @@all = []
 

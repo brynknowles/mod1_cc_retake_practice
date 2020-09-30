@@ -27,9 +27,11 @@ class RestaurantOwner
     end
 
     def sell_restaurant(restaurant, buyer)
-        # need to make restaurant owner the buyer
-        # use if statement to find who current owner is
-        # if self is the current owner, buyer becomes new owner
+        if restaurant.owner == self
+            restaurant.owner = buyer
+        else
+            "This restaurant is not for sale"
+        end
     end
 
 end
